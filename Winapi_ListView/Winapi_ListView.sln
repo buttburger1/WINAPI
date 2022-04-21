@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Winapi_ListView", "Winapi_ListView\Winapi_ListView.vcxproj", "{A1E9D6DF-9D6E-47CB-A3BA-2B1D1CAA21C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1E9D6DF-9D6E-47CB-A3BA-2B1D1CAA21C6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A1E9D6DF-9D6E-47CB-A3BA-2B1D1CAA21C6}.Debug|Win32.Build.0 = Debug|Win32
+		{A1E9D6DF-9D6E-47CB-A3BA-2B1D1CAA21C6}.Release|Win32.ActiveCfg = Release|Win32
+		{A1E9D6DF-9D6E-47CB-A3BA-2B1D1CAA21C6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
