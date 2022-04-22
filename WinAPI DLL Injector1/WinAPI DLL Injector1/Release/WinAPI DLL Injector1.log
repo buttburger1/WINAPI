@@ -1,0 +1,22 @@
+﻿Build started 4/22/2022 12:42:06 PM.
+     1>Project "C:\Users\Billgates\Desktop\WinAPI DLL Injector1\WinAPI DLL Injector1\WinAPI DLL Injector1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Common.cpp
+         Common.cpp
+     1>Common.cpp(128): warning C4101: 'hLib' : unreferenced local variable
+     1>Common.cpp(364): warning C4101: 'newChar' : unreferenced local variable
+     1>Common.cpp(368): warning C4101: 'floatarray' : unreferenced local variable
+     1>Common.cpp(367): warning C4101: 'intarray' : unreferenced local variable
+     1>Common.cpp(365): warning C4101: 'stringarray' : unreferenced local variable
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Billgates\Desktop\WinAPI DLL Injector1\Release\WinAPI DLL Injector1.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:\Users\Billgates\Desktop\WinAPI DLL Injector1\Release\WinAPI DLL Injector1.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Billgates\Desktop\WinAPI DLL Injector1\Release\WinAPI DLL Injector1.lib" /MACHINE:X86 /SAFESEH Release\Common.obj
+         Release\Main.obj
+         Release\vkey.obj
+         Generating code
+         Finished generating code
+         WinAPI DLL Injector1.vcxproj -> C:\Users\Billgates\Desktop\WinAPI DLL Injector1\Release\WinAPI DLL Injector1.exe
+     1>Done Building Project "C:\Users\Billgates\Desktop\WinAPI DLL Injector1\WinAPI DLL Injector1\WinAPI DLL Injector1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:08.78
