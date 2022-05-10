@@ -1,0 +1,167 @@
+//================================================================
+// SAMPLE SCRIPT FOR TWO WOW'S ON ONE PC
+//
+// Instructions: Copy this entire script (all the blue writing
+// on gray background including comments). Save it in a file.
+// Load it into HotkeyNet.
+//
+// Toggle the scroll lock key to turn hotkeys off and on. (You
+// can change this if you want, just like you can change
+// everything else with HotkeyNet.)
+//
+// Requires HotkeyNet build 147 or higher.
+//
+// For more info, go to www.hotkeynet.com
+//================================================================
+
+//-----------------------------------------------------------
+// PRESS CTRL R TO RENAME WOW'S IF YOU LAUNCH THEM MANUALLY
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn Ctrl R>
+    <SendPC local>
+        <RenameWin "World of Warcraft" WoW_1>
+        <RenameWin "World of Warcraft" WoW_2>
+        <RenameWin "World of Warcraft" WoW_3>
+        <RenameWin "World of Warcraft" WoW_4>
+        <RenameWin "World of Warcraft" WoW_5>
+
+//-----------------------------------------------------------
+// SUBROUTINE TO LAUNCH AND RENAME A COPY OF WOW.
+//-----------------------------------------------------------
+<Command LaunchAndRename>
+   <SendPC %1%>
+      <Run "c:\Program Files\World of Warcraft\WoW.exe">
+        <RenameTargetWin %2%>
+
+//-----------------------------------------------------------
+// HOTKEY TO LAUNCH AND RENAME BOTH WOW'S.
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn Alt Ctrl L>
+    <LaunchAndRename Local WoW_1>
+    <LaunchAndRename Local WoW_2>
+    <LaunchAndRename Local WoW_3>
+    <LaunchAndRename Local WoW_4>
+    <LaunchAndRename Local WoW_5>
+
+//-----------------------------------------------------------
+// DEFINE MAIL LABELS FOR SENDING KEY STROKES
+//-----------------------------------------------------------
+<Label w1 Local SendWinM WoW_1>
+<Label w2 Local SendWinM WoW_2>
+<Label w3 Local SendWinM WoW_3>
+<Label w4 Local SendWinM WoW_4>
+<Label w5 Local SendWinM WoW_5>
+
+//-----------------------------------------------------------
+// DEFINE FOCUS MAINWINDOW
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn Alt 1>
+<SendPC local>
+<Targetwin WoW_01>
+//<SetForegroundWin>
+<SetActiveWin>
+<SendLabel w1, w2, w3, w4, w5>
+//<Key %Trigger%>
+
+<Hotkey ScrollLockOn Alt 2>
+<SendPC local>
+<Targetwin WoW_02>
+//<SetForegroundWin>
+<SetActiveWin>
+<SendLabel w1, w2, w3, w4, w5>
+//<Key %Trigger%>
+
+<Hotkey ScrollLockOn Alt 3>
+<SendPC local>
+<Targetwin WoW_03>
+//<SetForegroundWin>
+<SetActiveWin>
+<SendLabel w1, w2, w3, w4, w5>
+//<Key %Trigger%>
+
+<Hotkey ScrollLockOn Alt 4>
+<SendPC local>
+<Targetwin WoW_04>
+//<SetForegroundWin>
+<SetActiveWin>
+<SendLabel w1, w2, w3, w4, w5>
+//<Key %Trigger%>
+
+<Hotkey ScrollLockOn Alt 5>
+<SendPC local>
+<Targetwin WoW_05>
+//<SetForegroundWin>
+<SetActiveWin>
+<SendLabel w1, w2, w3, w4, w5>
+//<Key %Trigger%>
+
+
+//-----------------------------------------------------------
+// DEFINE HOTKEYS FOR ALL KEY COMBINATIONS THAT WILL GET
+// SENT TO BOTH WOWS. ADD MORE KEY COMBO'S IF YOU WANT.
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn A-Z, 0-9, Period, Enter, Tab, Backspace, Insert, Delete, Home, End, PgUp, PgDn, Numpad0, Oem1, Oem7, Plus, Minus, Comma, F1-F12 except W, A, S, D, Q, E, R>
+<SendLabel w1, w2, w3, w4, w5>
+<Key %Trigger%>
+
+
+
+//STRAFE LEFT
+<UseKeyAsModifier Numpad1>
+<MovementHotkey ScrollLockOn Numpad1 Q>
+<SendLabel w3, w4, w5>
+<Key %Trigger%>
+
+
+//STRAFE LEFT
+<UseKeyAsModifier Numpad4>
+<MovementHotkey ScrollLockOn Numpad4 Q>
+<SendLabel w4, w5>
+<Key %Trigger%>
+
+
+//STRAFE LEFT
+<UseKeyAsModifier Numpad7>
+<MovementHotkey ScrollLockOn Numpad7 Q>
+<SendLabel w5>
+<Key %Trigger%>
+
+
+//STRAFE RIGHT
+<UseKeyAsModifier Numpad3>
+<MovementHotkey ScrollLockOn Numpad3 E>
+<SendLabel w8, w9, w10>
+<Key %Trigger%>
+
+//STRAFE RIGHT
+<UseKeyAsModifier Numpad6>
+<MovementHotkey ScrollLockOn Numpad6 E>
+<SendLabel w9, w10>
+<Key %Trigger%>
+
+//STRAFE RIGHT
+<UseKeyAsModifier Numpad9>
+<MovementHotkey ScrollLockOn Numpad9 E>
+<SendLabel w10>
+<Key %Trigger%>
+
+
+//-----------------------------------------------------------
+// DEFINE MOVEMENT KEYS THAT WILL GET SENT TO BOTH WOW'S.
+// ADD MORE KEYS IF YOU WANT.
+//-----------------------------------------------------------
+<MovementHotkey ScrollLockOn up, down, left, right>
+<SendLabel w1, w2, w3, w4, w5>
+<Key %Trigger%>
+
+//-----------------------------------------------------------
+// BROADCAST MOUSE CLICKS. HOLD DOWN OEM3 (ON U.S. KEYBOARDS,
+// THAT'S THE SQUIGGLE KEY IN UPPPER LEFT CORNER) WHEN YOU
+// WANT TO BROADCAST.
+//-----------------------------------------------------------
+<UseKeyAsModifier Oem3>
+
+<Hotkey ScrollLockOn Oem3 LButton, MButton, RButton, Button4, Button5>
+   <SendLabel w1, w2, w3, w4, w5>
+      <ClickMouse %TriggerMainKey%>
+
